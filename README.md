@@ -1,9 +1,9 @@
 #友盟渠道打包工具 (windows .net 4.0)
 
-友盟渠道打包工具开放源码使用 GPL2 许可分发[**绿色版本下载地址**](https://github.com/umeng/umeng-muti-channel-build-tool/tree/master/Downloads)
+友盟渠道打包工具开放源码使用 GPL2 许可分发[**绿色版本下载地址**](https://github.com/Cangol/umeng-muti-channel-build-tool/tree/master/Downloads)
 
 
-常见错误见[**这里**](https://github.com/umeng/umeng-muti-channel-build-tool/wiki/%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E8%AF%B4%E6%98%8E%5BFAQ%5D)
+常见错误见[**这里**](https://github.comCangol/umeng-muti-channel-build-tool/wiki/%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E8%AF%B4%E6%98%8E%5BFAQ%5D)
 目前不支持的Apk特性见[**这里**](https://github.com/umeng/umeng-muti-channel-build-tool/wiki/%E7%9B%AE%E5%89%8D%E6%B2%A1%E6%9C%89%E6%94%AF%E6%8C%81%E7%9A%84%E7%89%B9%E6%80%A7)
 (可能会导致发布的SDK产生严重bug)。
 
@@ -15,6 +15,7 @@ Google 现在已经发布了最新的[**构建系统**](http://tools.android.com
 
 
 ## 关于本次更新
+本次更新使用apktool 2.x （修正部分bug，和添加对android 5.0 build tools的支持）
 
 本次更新最大的改变是放弃了 V2.x 版本中通过 Apktool  反编译apk文件打包的方式，这种打包方式会对开发的apk文件做出大幅度的修改，可能会产生许多不兼容的问题，比如对jar包中包含资源的情况无法支持，对包含 .so 文件的apk兼容性也不好，而且在打包时 AndroidManifest.xml 文件中的特殊标签会丢失。为了解决这些问题减少对开发者apk文件的修改, 我们决定放弃这种方式，而采用直接编辑二进制的AndroidManifest.xml 文件的方式。这种方式只会修改 AndroidManifest.xml 文件，对于apk包中的资源文件和代码文件都不会做任何改变。如果打包不成功，生成的apk文件有问题，在测试阶段也可以快速发现，因为修改只会影响AndroidManifest.xml 相关的少量的设置。
 
@@ -29,6 +30,14 @@ JarSigner.jar 给 Apk 签名， `SignApk.jar`  文件是我们修改过的 `apk 
 
 [DotNetZip](http://dotnetzip.codeplex.com/) 解压缩和压缩文件使用的是DotNetZip(Ionic.Zip.dll), 运行源码需要加入这个库.
 ## 更新日志
+
+### V3.3
+
+2014-12-08
+
+更新内容
+
+>1. 增加支持android 5.0 buildtools 支持
 
 ### V3.2
 
