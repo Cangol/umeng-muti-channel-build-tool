@@ -15,7 +15,7 @@ Google 现在已经发布了最新的[**构建系统**](http://tools.android.com
 
 
 ## 关于本次更新
-本次更新使用apktool 2.x （修正部分bug，和添加对android 5.0 build tools的支持）
+本次更新使用apktool 2.x （修正部分bug，和添加对android 5.0（android sdk Build-tools 21）的支持）
 
 本次更新最大的改变是放弃了 V2.x 版本中通过 Apktool  反编译apk文件打包的方式，这种打包方式会对开发的apk文件做出大幅度的修改，可能会产生许多不兼容的问题，比如对jar包中包含资源的情况无法支持，对包含 .so 文件的apk兼容性也不好，而且在打包时 AndroidManifest.xml 文件中的特殊标签会丢失。为了解决这些问题减少对开发者apk文件的修改, 我们决定放弃这种方式，而采用直接编辑二进制的AndroidManifest.xml 文件的方式。这种方式只会修改 AndroidManifest.xml 文件，对于apk包中的资源文件和代码文件都不会做任何改变。如果打包不成功，生成的apk文件有问题，在测试阶段也可以快速发现，因为修改只会影响AndroidManifest.xml 相关的少量的设置。
 
@@ -37,7 +37,7 @@ JarSigner.jar 给 Apk 签名， `SignApk.jar`  文件是我们修改过的 `apk 
 
 更新内容
 
->1. 增加支持android 5.0 buildtools 支持
+>1. 增加支持android 5.0（android sdk Build-tools 21）的支持
 
 ### V3.2
 
