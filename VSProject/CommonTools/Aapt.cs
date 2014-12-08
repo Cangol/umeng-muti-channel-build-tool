@@ -207,7 +207,7 @@ namespace CommonTools
             cmd.Add("--no-src");
             cmd.Add("-f");
             cmd.Add(string.Format("\"{0}\"", pathToApkFile));
-            cmd.Add(string.Format("\"{0}\"", pathToDecodeFolder));
+            cmd.Add(string.Format("-o \"{0}\"", pathToDecodeFolder));//apktools 2.x use -o
 
             Sys.Run(cmd.ToCommand());
         }
@@ -224,7 +224,7 @@ namespace CommonTools
             cmd.Add("d");
             cmd.Add("-f");
             cmd.Add(string.Format("\"{0}\"", pathToApkFile));
-            cmd.Add(string.Format("\"{0}\"", pathToDecodeFolder));
+            cmd.Add(string.Format("-o \"{0}\"", pathToDecodeFolder));//apktools 2.x use -o
 
             Sys.Run(cmd.ToCommand());
         }
@@ -240,7 +240,7 @@ namespace CommonTools
             List<String> cmd = new List<string>();
             cmd.Add(mPathToApktool);
             cmd.Add("b");
-            cmd.Add(string.Format("\"{0}\"", pathToDecodeFolder));
+            cmd.Add(string.Format("-o \"{0}\"", pathToDecodeFolder));//apktools 2.x use -o
             cmd.Add(string.Format("\"{0}\"", pathToDstApk));
 
             Sys.Run(cmd.ToCommand());

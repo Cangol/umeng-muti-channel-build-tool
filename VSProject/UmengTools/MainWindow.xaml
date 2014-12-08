@@ -208,7 +208,7 @@
                     </Rectangle.Fill>
                 </Rectangle>
             
-                <Label Content="友盟打包工具" HorizontalAlignment="Left" Margin="10,0,0,0" Width="80" Foreground="#FFABABAB" Height="26" FontSize="11" />
+                <Label Content="友盟打包工具V3.3 (by Cangol)" HorizontalAlignment="Left" Margin="10,0,0,0" Width="180" Foreground="#FFABABAB" Height="26" FontSize="11" />
                 
                 <Button x:Name="closebutton" Content="Button" HorizontalAlignment="Right" Margin="0,1.037,0.704,0.963" Style="{DynamicResource close_button}" Width="40" Click="closebutton_Click"/>
                 <Button x:Name="minibutton" Content="Button" HorizontalAlignment="Right" Margin="0,1.037,40.704,0.963" Style="{DynamicResource mini_button}" Width="40" Click="minibutton_Click"/>

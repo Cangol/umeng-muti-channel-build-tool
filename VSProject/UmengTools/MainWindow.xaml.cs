@@ -72,9 +72,9 @@ namespace UmengTools
 
         private void menubutton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("友盟渠道打包工具V3.0\n"+
+            MessageBox.Show("友盟渠道打包工具V3.3\n"+
                             "源码地址：\n"+
-                            "https://github.com/umeng");
+                            "https://github.com/Cangol/umeng-muti-channel-build-tool");
         }
     }
 }

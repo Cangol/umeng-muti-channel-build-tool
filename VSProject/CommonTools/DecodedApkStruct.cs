@@ -90,8 +90,8 @@ namespace CommonTools
                 var attr_version = doc.DocumentElement.Attributes;
 
                 
-                VersionName = fetchString(attr_version["android:versionName"].Value);
-                VersionCode = fetchString(attr_version["android:versionCode"].Value);
+                //VersionName = fetchString(attr_version["android:versionName"].Value);
+               // VersionCode = fetchString(attr_version["android:versionCode"].Value);
 
                 var application = doc.GetElementsByTagName("application")[0];
                 var attr_app = application.Attributes;
