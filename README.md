@@ -39,6 +39,8 @@ JarSigner.jar 给 Apk 签名， `SignApk.jar`  文件是我们修改过的 `apk 
 
 >1. 增加支持android 5.0（android sdk Build-tools 21）的支持
 
+常见错误：如果提示AndroidManifest.xml找不到，原因可能是：未装java（需要安装Java7，并设置path)
+
 ### V3.2
 
 2014-06-19
